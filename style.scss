@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.weather {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  .container_weather {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 0px 36px 20px rgba(34, 60, 80, 0.19);
+    @media (max-width: 520px) {
+      width: 350px;
+    }
+    .current {
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 145, 255, 0.678);
+      .city {
+        max-width: 450px;
+        width: 100%;
+        min-height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 520px) {
+          width: 320px;
+        }
+        .city_name {
+          display: flex;
+          p {
+            font-size: 25px;
+          }
+        }
+        .city_time {
+          display: flex;
+          font-size: 20px;
+        }
+      }
+      .city_weather {
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 520px) {
+          width: 320px;
+        }
+      }
+      .search {
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .location_city {
+          border: none;
+          width: 200px;
+          height: 25px;
+          border-radius: 10px 0 0 10px;
+          padding-left: 10px;
+          font-size: 15px;
+          outline: 0;
+        }
+        .search_weather {
+          max-width: 70px;
+          width: 100%;
+          border: none;
+          height: 25px;
+          border-radius: 0 10px 10px 0;
+          font-size: 15px;
+          background-color: rgba(60, 71, 229, 0.437);
+          cursor: pointer;
+        }
+        .search_weather:hover {
+          background-color: rgba(20, 0, 150, 0.508);
+        }
+      }
+    }
+    .forecast {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .container {
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 120px;
+        border-bottom: 2px solid rgba(0, 145, 255, 0.678);
+        @media (max-width: 520px) {
+          width: 320px;
+        }
+      }
+    }
+  }
+}
